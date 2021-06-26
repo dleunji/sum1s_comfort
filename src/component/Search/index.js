@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import SearchIcon from "@material-ui/icons/Search";
-import MicIcon from "@material-ui/icons/Mic";
+import sendIcon from '../../images/send.svg'
 import { Button } from "@material-ui/core";
 
 const Search = ({input, result, buttonVisible, setInput, search}) => {
@@ -10,7 +10,7 @@ const Search = ({input, result, buttonVisible, setInput, search}) => {
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
         <input value={input} onChange={(e) => setInput(e.target.value)} />
-        <MicIcon />
+        <img src={sendIcon} onClick={search} alt="search"/>
       </div>
       {result? (<div className="search__result">
         {result}
